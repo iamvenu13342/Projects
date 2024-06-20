@@ -57,7 +57,8 @@ Automate the configuration of IAM policies, roles, and users to manage access co
    }
    ```
 
-2. **Attach Policies to Users/Roles:**
+3. **Attach Policies to Users/Roles:**
+  
    ```hcl
    resource "aws_iam_role_policy_attachment" "attach_policy" {
      role       = aws_iam_role.role.name
