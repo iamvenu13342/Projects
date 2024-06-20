@@ -6,36 +6,36 @@ When setting up infrastructure monitoring using Prometheus and Grafana on AWS, s
 
 <h2>1. Incorrect AWS AMI ID </h2>
 
-**Issue:** The specified AMI ID (`ami-0c55b159cbfafe1f0`) might not be available in the region you're deploying to.
+-**Issue:** The specified AMI ID (`ami-0c55b159cbfafe1f0`) might not be available in the region you're deploying to.
 
-**Solution:** Verify the AMI ID is available in your region. Use the AWS Management Console or AWS CLI to find a suitable AMI ID.
+-**Solution:** Verify the AMI ID is available in your region. Use the AWS Management Console or AWS CLI to find a suitable AMI ID.
 
 <h2>2. Security Group Configuration Errors</h2>
 
-**Issue:** The security group rules might not be correctly configured, preventing access to Prometheus or Grafana.
+-**Issue:** The security group rules might not be correctly configured, preventing access to Prometheus or Grafana.
 
-**Solution:** Ensure that the security group allows inbound traffic on the necessary ports (80 for HTTP and 3000 for Grafana). 
+-**Solution:** Ensure that the security group allows inbound traffic on the necessary ports (80 for HTTP and 3000 for Grafana). 
 Verify the VPC ID is correct and exists.
 
 <h2>3. IAM Role and Policy Issues</h2>
 
-**Issue:** The IAM role and policy attachment might not be correctly configured, causing permission errors.
+-**Issue:** The IAM role and policy attachment might not be correctly configured, causing permission errors.
 
-**Solution:** Ensure the IAM role has the correct trust relationship and the policy ARN is accurate. 
+-**Solution:** Ensure the IAM role has the correct trust relationship and the policy ARN is accurate. 
 Verify the role is correctly attached to the EC2 instances.
 
 <h2>4. VPC and Subnet Configuration Errors</h2>
 
-**Issue:** The VPC or subnet configuration might be incorrect, causing deployment failures.
+-**Issue:** The VPC or subnet configuration might be incorrect, causing deployment failures.
 
-**Solution:** Double-check the VPC and subnet IDs and ensure they exist and are correctly configured. 
+-**Solution:** Double-check the VPC and subnet IDs and ensure they exist and are correctly configured. 
 Verify that the subnet ID matches the VPC ID.
 
 <h2>5. Terraform Module Errors</h2>
 
-**Issue:** Errors in Terraform modules might cause deployment issues.
+-**Issue:** Errors in Terraform modules might cause deployment issues.
 
-**Solution:** Ensure the modules are correctly sourced and configured. 
+-**Solution:** Ensure the modules are correctly sourced and configured. 
 Verify all required variables are provided and outputs are correctly defined.
 
 
