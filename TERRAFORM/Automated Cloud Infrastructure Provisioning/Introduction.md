@@ -67,9 +67,22 @@ Automate the provisioning of a full-stack application infrastructure on AWS, inc
 
 <h2>Common Issues and Resolutions</h2>
 
+1. **AWS Credentials and Permissions:**
 
+2. **VPC and Subnet Configuration:**
+
+3. **Security Groups:**
+
+4. **EC2 Instance Configuration:**
+
+5. **Remote State Configuration:**
+
+6. **Module Reusability:**
+
+   
 To automate the provisioning of a full-stack application infrastructure on AWS using Terraform, the steps and components outlined in your project description are well-structured. 
 However, there are several common issues that may arise during such projects, along with their potential resolutions:
+
 
 
 1. **AWS Credentials and Permissions:**
