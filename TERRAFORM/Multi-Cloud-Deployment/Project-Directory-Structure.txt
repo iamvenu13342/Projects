@@ -1,0 +1,17 @@
+multi-cloud-terraform/
+├── aws/
+│   ├── main.tf
+│   ├── variables.tf
+│   ├── outputs.tf
+├── azure/
+│   ├── main.tf
+│   ├── variables.tf
+│   ├── outputs.tf
+├── gcp/
+│   ├── main.tf
+│   ├── variables.tf
+│   ├── outputs.tf
+├── backend.tf
+├── providers.tf
+├── main.tf
+└── README.md
