@@ -17,23 +17,3 @@ This project manages infrastructure across AWS, Azure, and GCP using Terraform.
 - `main.tf`: Main Terraform file that calls the provider-specific modules.
 
 
-<h2>Usage</h2>
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/your-repo/multi-cloud-terraform.git
-   cd multi-cloud-terraform
-
-2. Initialize Terraform:
-   
- ```bash
-    terraform init
-
-3. Plan the deployment:
-
- terraform plan
-
-
-4. Apply the deployment:
-
-terraform apply -auto-approve
