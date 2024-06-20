@@ -90,3 +90,19 @@ Deploy a serverless application on AWS using AWS Lambda and API Gateway.
 - **Cost-Efficiency:** Pay only for the compute time you use.
 
 - **Scalability:** Automatically scale up and down based on demand.
+
+
+<h2>Here are common issues and troubleshooting steps for each part of the project:</h2>
+
+**1. AWS CLI Configuration Issues**
+
+**2. IAM Permissions Issues**
+
+**3. Terraform Initialization Issues**
+
+**4. Lambda Function Deployment Issues**
+
+**5. API Gateway Configuration Issues**
+
+**6. IAM Role Configuration Issues**
+
