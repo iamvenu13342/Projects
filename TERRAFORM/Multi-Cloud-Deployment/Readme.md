@@ -23,3 +23,15 @@ This project manages infrastructure across AWS, Azure, and GCP using Terraform.
    ```bash
    git clone https://github.com/your-repo/multi-cloud-terraform.git
    cd multi-cloud-terraform
+
+2. Initialize Terraform:
+
+   terraform init
+
+3. Plan the deployment:
+
+   terraform plan
+
+4. Apply the deployment:
+
+   terraform apply -auto-approve
