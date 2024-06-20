@@ -1,0 +1,15 @@
+serverless-app/
+├── main.tf
+├── variables.tf
+├── outputs.tf
+├── providers.tf
+├── iam/
+│   ├── lambda_role.tf
+├── lambda/
+│   ├── lambda_function.tf
+│   ├── lambda_function_payload.zip
+├── api_gateway/
+│   ├── rest_api.tf
+│   ├── resource.tf
+│   ├── method.tf
+│   ├── integration.tf
