@@ -1,11 +1,11 @@
 <h1> CI/CD Pipeline Integration</h1>
 
-<h2>Project Description:<h2>
+<h2>Project Description:</h2>
 
 Integrate Terraform with a CI/CD pipeline to automate the deployment of infrastructure changes.
 
 
-<h2>Key Components:<h2>
+<h2>Key Components:</h2>
 
 - **CI/CD Tools:** Use Jenkins, GitLab CI, or GitHub Actions.
 
@@ -14,7 +14,7 @@ Integrate Terraform with a CI/CD pipeline to automate the deployment of infrastr
 - **Remote State Management:** Ensure state is stored remotely for consistency.
 
 
-<h2>Steps:<h2>
+<h2>Steps:</h2>
 
 1. **Jenkins Pipeline Configuration:**
  
@@ -92,7 +92,7 @@ Integrate Terraform with a CI/CD pipeline to automate the deployment of infrastr
    ```
 
 
-<h2>Benefits:<h2>
+<h2>Benefits:</h2>
 
 - **Automation:** Reduces manual intervention in infrastructure management.
 
