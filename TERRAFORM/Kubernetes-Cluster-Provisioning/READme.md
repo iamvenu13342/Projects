@@ -73,3 +73,13 @@ Automate the provisioning of a Kubernetes cluster on AWS using EKS (Elastic Kube
 
 - **Scalability:** Easily scale the cluster by adjusting node group configurations.
 
+
+<h2>Common Issues and Solutions</h2>
+
+**1. IAM Roles and Policies**
+
+**2. Networking Configuration**
+
+**3. Terraform State Management**
+
+**4. Version Compatibility**
