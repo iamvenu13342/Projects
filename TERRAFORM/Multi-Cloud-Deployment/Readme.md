@@ -32,12 +32,10 @@ terraform init
 
 3. Plan the deployment:
 
- ```bash
 
  terraform plan
 
 4. Apply the deployment:
 
- ```bash
 
 terraform apply -auto-approve
