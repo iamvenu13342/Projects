@@ -1,4 +1,4 @@
-<h1>1. Automated Cloud Infrastructure Provisioning</h1>
+<h1> Automated Cloud Infrastructure Provisioning</h1>
 
 
 <h2>Project Description:</h2>
