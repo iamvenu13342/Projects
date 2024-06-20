@@ -27,14 +27,17 @@ This project manages infrastructure across AWS, Azure, and GCP using Terraform.
 2. Initialize Terraform:
    
  ```bash
-   terraform init
+
+terraform init
 
 3. Plan the deployment:
 
  ```bash
-   terraform plan
+
+ terraform plan
 
 4. Apply the deployment:
 
  ```bash
-   terraform apply -auto-approve
+
+terraform apply -auto-approve
