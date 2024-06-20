@@ -102,4 +102,14 @@ Set up monitoring for cloud infrastructure using Prometheus and Grafana on AWS.
 
 - **Alerting:** Set up alerts to respond to incidents proactively.
 
+<h1>some common issues along with their potential solutions:</h1>
 
+**1. Incorrect AWS AMI ID** 
+
+**2. Security Group Configuration Errors**
+
+**3. IAM Role and Policy Issues**
+
+**4. VPC and Subnet Configuration Errors**
+
+**5. Terraform Module Errors**
