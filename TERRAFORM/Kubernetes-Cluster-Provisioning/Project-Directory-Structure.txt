@@ -1,0 +1,16 @@
+eks-cluster/
+├── modules/
+│   ├── eks/
+│   │   ├── main.tf
+│   │   ├── variables.tf
+│   │   ├── outputs.tf
+│   ├── node_groups/
+│   │   ├── main.tf
+│   │   ├── variables.tf
+│   │   ├── outputs.tf
+├── iam_roles.tf
+├── main.tf
+├── variables.tf
+├── outputs.tf
+├── backend.tf
+└── providers.tf
