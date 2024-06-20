@@ -5,7 +5,7 @@
 Manage infrastructure across multiple cloud providers (AWS, Azure, and GCP) to deploy a globally distributed application.
 
 
-<h2>Key Components:<h2>
+<h2>Key Components:</h2>
 
 - **Multi-Provider Support:** Use Terraform providers for AWS, Azure, and GCP.
 
