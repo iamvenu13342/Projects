@@ -2,7 +2,21 @@
 
 When issues arise during the setup and deployment of your serverless application using Terraform, 
 it’s important to follow a systematic approach to identify and resolve them. 
+
 Here are common issues and troubleshooting steps for each part of the project:
+
+**1. AWS CLI Configuration Issues**
+
+**2. IAM Permissions Issues**
+
+**3. Terraform Initialization Issues**
+
+**4. Lambda Function Deployment Issues**
+
+**5. API Gateway Configuration Issues**
+
+**6. IAM Role Configuration Issues**
+
 
 
 <h2>1. AWS CLI Configuration Issues</h2>
