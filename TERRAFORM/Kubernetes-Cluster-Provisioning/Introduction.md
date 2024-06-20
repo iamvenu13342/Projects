@@ -1,5 +1,5 @@
 
-<h1>3. Kubernetes Cluster Provisioning<h1>
+<h1> Kubernetes Cluster Provisioning<h1>
   
 <h2>Project Description:</h2>
 
