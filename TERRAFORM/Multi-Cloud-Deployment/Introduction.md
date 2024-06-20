@@ -86,4 +86,15 @@ Manage infrastructure across multiple cloud providers (AWS, Azure, and GCP) to d
 
 - **Disaster Recovery:** Increase resilience with a multi-cloud strategy.
 
+<h2>Common Issues and Resolutions</h2>
+
+1. **Provider Configuration and Authentication:**
+
+2. **Networking and Connectivity:**
+
+3. **Resource Naming Conflicts:**
+
+4. **State Management:**
+
+5. **Resource Dependencies:**
 
