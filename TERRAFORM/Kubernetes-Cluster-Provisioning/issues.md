@@ -1,8 +1,8 @@
-
+### Common Issues and Solutions
 
 When automating the provisioning of a Kubernetes cluster on AWS using EKS (Elastic Kubernetes Service) with Terraform, several common issues can arise. Here are some typical issues and their solutions:
 
-### Common Issues and Solutions
+
 
 #### 1. **IAM Roles and Policies**
 
