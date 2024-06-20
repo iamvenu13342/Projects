@@ -1,0 +1,23 @@
+infra-monitoring/
+├── ec2_instances/
+│   ├── main.tf
+│   ├── variables.tf
+│   ├── outputs.tf
+├── security_groups/
+│   ├── main.tf
+│   ├── variables.tf
+│   ├── outputs.tf
+├── iam_roles/
+│   ├── main.tf
+│   ├── variables.tf
+│   ├── outputs.tf
+├── vpc/
+│   ├── main.tf
+│   ├── variables.tf
+│   ├── outputs.tf
+├── main.tf
+├── variables.tf
+├── outputs.tf
+├── backend.tf
+├── providers.tf
+└── README.md
