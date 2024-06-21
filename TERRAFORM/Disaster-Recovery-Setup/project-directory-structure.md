@@ -22,7 +22,7 @@ dr-setup/
 
 
 
-<h2>Components
+<h2>Components</h2>
 
 **Primary Region**
 
