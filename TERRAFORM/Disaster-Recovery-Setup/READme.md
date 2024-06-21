@@ -103,7 +103,7 @@ Set up disaster recovery for critical applications using Terraform to automate f
 
 - **Business Continuity:** Minimize downtime and maintain service availability.
 
-  ### Common Issues and Resolutions
+<h2>Common Issues and Resolutions</h2>
 
 1. **Terraform State Conflicts**: Ensure remote state locking.
 
