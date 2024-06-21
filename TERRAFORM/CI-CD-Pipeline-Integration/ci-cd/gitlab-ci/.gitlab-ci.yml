@@ -1,0 +1,20 @@
+stages:
+  - init
+  - plan
+  - apply
+
+variables:
+  TF_VAR_aws_access_key: ${AWS_ACCESS_KEY}
+  TF_VAR_aws_secret_key: ${AWS_SECRET_KEY}
+
+init:
+  script:
+    - terraform init
+
+plan:
+  script:
+    - terraform plan
+
+apply:
+  script:
+    - terraform apply -auto-approve
