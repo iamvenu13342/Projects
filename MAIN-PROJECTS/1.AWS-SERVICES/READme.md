@@ -1,4 +1,4 @@
-<h1>microservices-based web application using AWS services</h1>
+<h1>Microservices-based web application using AWS services</h1>
 
 Creating a real-time project that leverages a wide array of AWS services can provide a comprehensive demonstration of AWS's capabilities. Here's a step-by-step outline for a project to deploy a scalable web application using microservices architecture on AWS, incorporating continuous integration and deployment (CI/CD) practices:
 
