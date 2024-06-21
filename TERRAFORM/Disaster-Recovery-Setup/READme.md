@@ -102,3 +102,15 @@ Set up disaster recovery for critical applications using Terraform to automate f
 - **Resilience:** Ensure high availability and quick recovery from disasters.
 
 - **Business Continuity:** Minimize downtime and maintain service availability.
+
+  ### Common Issues and Resolutions
+
+1. **Terraform State Conflicts**: Ensure remote state locking.
+
+2. **IAM Permissions**: Verify all required permissions are in place.
+
+3. **Replication Errors**: Ensure correct configuration and permissions for cross-region replication.
+
+4. **Network Misconfigurations**: Double-check VPC, subnet, and security group settings.
+
+5. **Failover Testing**: Regularly test and refine the failover process.
