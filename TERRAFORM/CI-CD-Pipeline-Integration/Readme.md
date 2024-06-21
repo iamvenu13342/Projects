@@ -97,3 +97,17 @@ Integrate Terraform with a CI/CD pipeline to automate the deployment of infrastr
 - **Automation:** Reduces manual intervention in infrastructure management.
 
 - **Consistency:** Ensures infrastructure changes are reviewed and applied consistently.
+
+<h2>Common Issues and Solutions</h2>
+
+**1. Terraform State Management**
+
+**2. Credential Management**
+
+**3. Resource Conflicts**
+
+**4. Pipeline Configuration Errors**
+
+**5. Network and Connectivity Issues**
+
+**6. IAM Role and Policy Issues**
