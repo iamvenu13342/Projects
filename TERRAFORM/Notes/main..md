@@ -1,4 +1,4 @@
-Certainly! Let's add an AWS VPC (Virtual Private Cloud) along with the previously defined resources in the `main.tf` file:
+ <h1> `main.tf` file:</h1>
 
 ```hcl
 provider "aws" {
@@ -110,10 +110,18 @@ resource "aws_subnet" "example_subnet" {
 }
 ```
 
+
 ### Explanation:
+- **AWS EC2 Instance**: Creates a single EC2 instance with a specific AMI and instance type.
+- **AWS S3 Bucket**: Defines an S3 bucket with a private ACL.
+- **AWS IAM User**: Creates an IAM user named "example-user".
+- **AWS RDS MySQL Database Instance**: Sets up an RDS MySQL database instance with specified parameters.
+- **AWS Route 53 DNS Record**: Defines a DNS record in Route 53 for the domain "example.com".
+- **AWS Lambda Function**: Sets up a Lambda function named "example_lambda".
+- **AWS IAM Role**: Creates an IAM role with a trust policy allowing Lambda to assume the role.
+- **AWS SNS Topic**: Defines an SNS topic named "example-topic".
+- **AWS DynamoDB Table**: Creates a DynamoDB table with PAY_PER_REQUEST billing mode and a hash key attribute.
 - **AWS VPC (`aws_vpc.example_vpc`)**: Creates a VPC with CIDR block `10.0.0.0/16`, enabling DNS support and hostnames.
 - **AWS Subnet (`aws_subnet.example_subnet`)**: Creates a subnet (`10.0.1.0/24`) within the VPC `aws_vpc.example_vpc` in availability zone `us-west-2a`.
 - **Other Resources**: These remain unchanged from the previous example.
 
-This updated `main.tf` file now includes an AWS VPC and subnet along with the existing resources. 
-Adjust the settings such as CIDR blocks, names, regions, and configurations as per your specific requirements and best practices for your infrastructure deployment.
