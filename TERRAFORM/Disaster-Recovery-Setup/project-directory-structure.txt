@@ -1,0 +1,21 @@
+dr-setup/
+├── main.tf
+├── variables.tf
+├── outputs.tf
+├── primary/
+│   ├── main.tf
+│   ├── variables.tf
+│   ├── outputs.tf
+├── secondary/
+│   ├── main.tf
+│   ├── variables.tf
+│   ├── outputs.tf
+├── data-replication/
+│   ├── main.tf
+│   ├── variables.tf
+│   ├── outputs.tf
+├── failover/
+│   ├── main.tf
+│   ├── variables.tf
+│   ├── outputs.tf
+└── README.md
