@@ -1,0 +1,24 @@
+pipeline {
+    agent any
+    environment {
+        TF_VAR_aws_access_key = credentials('aws-access-key')
+        TF_VAR_aws_secret_key = credentials('aws-secret-key')
+    }
+    stages {
+        stage('Terraform Init') {
+            steps {
+                sh 'terraform init'
+            }
+        }
+        stage('Terraform Plan') {
+            steps {
+                sh 'terraform plan'
+            }
+        }
+        stage('Terraform Apply') {
+            steps {
+                sh 'terraform apply -auto-approve'
+            }
+        }
+    }
+}
