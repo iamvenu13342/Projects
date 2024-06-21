@@ -1,0 +1,24 @@
+infrastructure/
+├── terraform/
+│   ├── main.tf
+│   ├── variables.tf
+│   ├── outputs.tf
+│   ├── backend.tf
+│   ├── provider.tf
+│   ├── modules/
+│   │   ├── vpc/
+│   │   │   ├── main.tf
+│   │   │   ├── variables.tf
+│   │   │   └── outputs.tf
+│   │   ├── eks/
+│   │   │   ├── main.tf
+│   │   │   ├── variables.tf
+│   │   │   └── outputs.tf
+├── ci-cd/
+│   ├── jenkins/
+│   │   └── Jenkinsfile
+│   ├── gitlab-ci/
+│   │   └── .gitlab-ci.yml
+│   ├── github-actions/
+│   │   └── main.yml
+└── README.md
