@@ -1,4 +1,5 @@
-Deploying the application in a Kubernetes cluster involves several additional steps beyond using Docker and Jenkins. We need to:
+<h1>Deploying the application in a Kubernetes cluster</h1>
+involves several additional steps beyond using Docker and Jenkins. We need to:
 
 1. **Create a Kubernetes Cluster**: This can be done using a managed service like Amazon EKS or a local setup like Minikube.
 2. **Create Kubernetes Configuration Files**: Define your deployment, service, and other necessary resources.
