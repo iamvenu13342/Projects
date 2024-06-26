@@ -1,0 +1,37 @@
+pipeline {
+    agent any
+    environment {
+        AWS_DEFAULT_REGION = 'us-west-2'
+    }
+    stages {
+        stage('Build') {
+            steps {
+                script {
+                    def app = docker.build("yourusername/your-app")
+                }
+            }
+        }
+        stage('Push') {
+            steps {
+                script {
+                    docker.withRegistry('https://index.docker.io/v1/', 'dockerhub-credentials') {
+                        def app = docker.build("yourusername/your-app")
+                        app.push("${env.BUILD_NUMBER}")
+                        app.push("latest")
+                    }
+                }
+            }
+        }
+        stage('Deploy to Kubernetes') {
+            steps {
+                script {
+                    withAWS(region: 'us-west-2', credentials: 'aws-credentials-id') {
+                        sh 'aws eks update-kubeconfig --name my-cluster --region us-west-2'
+                    }
+                    sh 'kubectl apply -f k8s/deployment.yaml'
+                    sh 'kubectl apply -f k8s/service.yaml'
+                }
+            }
+        }
+    }
+}
