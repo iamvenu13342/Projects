@@ -1,0 +1,28 @@
+pipeline {
+    agent any
+    stages {
+        stage('Build') {
+            steps {
+                script {
+                    def app = docker.build("yourusername/your-app")
+                }
+            }
+        }
+        stage('Test') {
+            steps {
+                script {
+                    docker.image("yourusername/your-app").inside {
+                        sh 'npm test'
+                    }
+                }
+            }
+        }
+        stage('Deploy') {
+            steps {
+                script {
+                    docker.image("yourusername/your-app").run("-p 3000:3000")
+                }
+            }
+        }
+    }
+}
