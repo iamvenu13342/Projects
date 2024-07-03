@@ -1,8 +1,8 @@
-<h1>Include Docker for containerization</h1>
+<h1>Include Docker & Dockerhub for containerization</h1>
 
-Sure! Let's expand the project to include Docker for containerization. Here's a detailed guide on creating a CI/CD pipeline using AWS EC2, GitHub, Jenkins, and Docker.
+Certainly! Let's create a complete CI/CD pipeline using AWS EC2, GitHub, Jenkins, Docker, and Docker Hub. This project will include setting up a simple web application, configuring a GitHub repository, setting up Jenkins to automate the build and deployment process, and pushing the Docker image to Docker Hub.
 
-### Step 1: Setting up an AWS EC2 Instance
+### Step 1: Set up an AWS EC2 Instance
 
 1. **Launch an EC2 Instance**:
    - Go to the AWS Management Console.
@@ -72,15 +72,15 @@ Sure! Let's expand the project to include Docker for containerization. Here's a 
      ```
    - Follow the instructions to set up Jenkins and install the suggested plugins.
 
-### Step 3: Set up GitHub Repository
+### Step 3: Set up a GitHub Repository
 
 1. **Create a GitHub Repository**:
-   - Go to GitHub and create a new repository (e.g., `simple-ci-cd-docker`).
+   - Go to GitHub and create a new repository (e.g., `simple-ci-cd-docker-project`).
 
 2. **Clone the Repository to Your Local Machine**:
    ```bash
-   git clone https://github.com/your-username/simple-ci-cd-docker.git
-   cd simple-ci-cd-docker
+   git clone https://github.com/your-username/simple-ci-cd-docker-project.git
+   cd simple-ci-cd-docker-project
    ```
 
 3. **Add a Simple Dockerized Application**:
@@ -109,16 +109,6 @@ Sure! Let's expand the project to include Docker for containerization. Here's a 
      CMD ["python", "app.py"]
      ```
 
-   - Create a `docker-compose.yml`:
-     ```yaml
-     version: '3'
-     services:
-       web:
-         build: .
-         ports:
-           - "5000:5000"
-     ```
-
 4. **Push Changes to GitHub**:
    ```bash
    git add .
@@ -126,7 +116,15 @@ Sure! Let's expand the project to include Docker for containerization. Here's a 
    git push origin main
    ```
 
-### Step 4: Configure Jenkins for CI/CD with Docker
+### Step 4: Set up Docker Hub Repository
+
+1. **Create a Docker Hub Account**:
+   - Go to Docker Hub and create an account if you don't already have one.
+
+2. **Create a Repository**:
+   - Create a new repository (e.g., `simple-ci-cd-docker-project`).
+
+### Step 5: Configure Jenkins for CI/CD with Docker and Docker Hub
 
 1. **Install Jenkins Plugins**:
    - Go to "Manage Jenkins" > "Manage Plugins".
@@ -141,7 +139,7 @@ Sure! Let's expand the project to include Docker for containerization. Here's a 
 
 3. **Configure the Job**:
    - Under "Pipeline", select "Pipeline script from SCM".
-   - Choose "Git" and enter your repository URL (e.g., `https://github.com/your-username/simple-ci-cd-docker.git`).
+   - Choose "Git" and enter your repository URL (e.g., `https://github.com/your-username/simple-ci-cd-docker-project.git`).
    - If your repository is private, you'll need to add your GitHub credentials.
    - Specify the script path as `Jenkinsfile`.
 
@@ -150,16 +148,31 @@ Sure! Let's expand the project to include Docker for containerization. Here's a 
    pipeline {
        agent any
 
+       environment {
+           DOCKERHUB_CREDENTIALS = credentials('dockerhub-credentials')
+           DOCKERHUB_REPO = 'your-dockerhub-username/simple-ci-cd-docker-project'
+       }
+
        stages {
            stage('Checkout') {
                steps {
-                   git 'https://github.com/your-username/simple-ci-cd-docker.git'
+                   git 'https://github.com/your-username/simple-ci-cd-docker-project.git'
                }
            }
            stage('Build Docker Image') {
                steps {
                    script {
-                       dockerImage = docker.build("simple-ci-cd-docker")
+                       dockerImage = docker.build("${env.DOCKERHUB_REPO}:${env.BUILD_ID}")
+                   }
+               }
+           }
+           stage('Push Docker Image') {
+               steps {
+                   script {
+                       docker.withRegistry('https://index.docker.io/v1/', 'dockerhub-credentials') {
+                           dockerImage.push("${env.BUILD_ID}")
+                           dockerImage.push("latest")
+                       }
                    }
                }
            }
@@ -174,11 +187,16 @@ Sure! Let's expand the project to include Docker for containerization. Here's a 
    }
    ```
 
-5. **Save and Build**:
+5. **Add Docker Hub Credentials to Jenkins**:
+   - Go to "Manage Jenkins" > "Manage Credentials".
+   - Add a new set of credentials for Docker Hub with your Docker Hub username and password.
+   - Give it an ID (e.g., `dockerhub-credentials`).
+
+6. **Save and Build**:
    - Save the job configuration.
    - Click "Build Now" to trigger a build manually.
 
-### Step 5: Set Up Webhook for Automatic Builds
+### Step 6: Set Up Webhook for Automatic Builds
 
 1. **Set up GitHub Webhook**:
    - Go to your GitHub repository settings.
@@ -207,4 +225,11 @@ Sure! Let's expand the project to include Docker for containerization. Here's a 
    - Go to your Jenkins dashboard.
    - Verify that a new build is triggered automatically by the webhook.
 
-Congratulations! You've set up a full CI/CD pipeline using AWS EC2, GitHub, Jenkins, and Docker. Now, every time you push changes to your GitHub repository, Jenkins will automatically build a Docker image, run the container, and ensure your application is up-to-date.
+3. **Verify the Docker Hub Repository**:
+   - Go to Docker Hub and check if the new Docker image has been pushed to your repository.
+
+4. **Verify the Deployment**:
+   - Open your browser and navigate to `http://your-ec2-public-dns:5000`.
+   - You should see your updated web application.
+
+Congratulations! You've set up a full CI/CD pipeline using AWS EC2, GitHub, Jenkins, Docker, and Docker Hub. Now, every time you push changes to your GitHub repository, Jenkins will automatically build a Docker image, push it to Docker Hub, and run the container, ensuring your application is up-to-date.
