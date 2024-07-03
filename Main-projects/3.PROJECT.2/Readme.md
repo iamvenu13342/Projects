@@ -1,4 +1,4 @@
-<h1>include Docker for containerization</h1>
+<h1>Include Docker for containerization</h1>
 
 Sure! Let's expand the project to include Docker for containerization. Here's a detailed guide on creating a CI/CD pipeline using AWS EC2, GitHub, Jenkins, and Docker.
 
